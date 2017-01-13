@@ -4,5 +4,5 @@ Script that downloads bing picture of the day and sets it as ubuntu desktop wall
 
 ##Instructions
 
-1. Run 'crontab -e' and edit it to add the run_script.sh in prefered frequency.
+1. Run 'crontab -e' and edit it to run the run_script.sh in prefered frequency.
 2. Enjoy bing picture of the day in your desktop daily.

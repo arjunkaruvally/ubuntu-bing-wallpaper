@@ -6,7 +6,7 @@ import json
 import cStringIO
 import datetime
 
-metadata = urllib2.urlopen("http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US").read()
+metadata = urllib2.urlopen("http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-IN").read()
 
 metadata = json.loads(metadata)
 
@@ -23,7 +23,12 @@ ctr = now.day
 
 print "file created"
 
-fd = open ('/home/arjun/open_source/bing-wallpaper-ubuntu/pics/file'+str(ctr)+'.jpg', 'w+')
+if ctr<10:
+	ctr = '0'+str(ctr)
+else:
+	ctr = str(ctr)
+
+fd = open ('/home/arjun/open_source/bing-wallpaper-ubuntu/pics/file'+ctr+'.jpg', 'w+')
 # populate buf
 fd.write (file.getvalue ())
 
